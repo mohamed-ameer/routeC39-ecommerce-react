@@ -5,7 +5,7 @@ import style from "./Brands.module.css";
 
 export default function Brands() {
   let { data, isLoading } = useAxios(
-    "https://route-ecommerce-app.vercel.app/api/v1/brands"
+    "https://ecommerce.routemisr.com/api/v1/brands"
   );
 
   return (

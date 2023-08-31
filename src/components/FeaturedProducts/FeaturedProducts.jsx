@@ -20,13 +20,13 @@ export default function FeaturedProducts(props) {
   }
 
   let { data, isLoading } = useAxios(
-    "https://route-ecommerce-app.vercel.app/api/v1/products"
+    "https://ecommerce.routemisr.com/api/v1/products"
   );
 
   function addToWishlist(i) {
     toast.promise(
       axios.post(
-        "https://route-ecommerce-app.vercel.app/api/v1/wishlist",
+        "https://ecommerce.routemisr.com/api/v1/wishlist",
         { productId: data.data[i].id },
         {
           headers: {

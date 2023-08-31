@@ -12,13 +12,13 @@ export default function Cart() {
   let { ToastContainer, notify } = useNotify();
 
   let { data, isLoading, setError, setData } = useAxios(
-    `https://route-ecommerce-app.vercel.app/api/v1/Wishlist`,
+    `https://ecommerce.routemisr.com/api/v1/Wishlist`,
     localStorage.getItem("userToken")
   );
 
   function callApi() {
     axios
-      .get(`https://route-ecommerce-app.vercel.app/api/v1/Wishlist`, {
+      .get(`https://ecommerce.routemisr.com/api/v1/Wishlist`, {
         headers: {
           token: localStorage.getItem("userToken"),
         },
@@ -38,7 +38,7 @@ export default function Cart() {
     setBtnislaoding(true);
     axios
       .post(
-        "https://route-ecommerce-app.vercel.app/api/v1/cart",
+        "https://ecommerce.routemisr.com/api/v1/cart",
         { productId: id },
         {
           headers: {
@@ -59,7 +59,7 @@ export default function Cart() {
   function removeItem(id) {
     setBtnislaoding(true);
     axios
-      .delete(`https://route-ecommerce-app.vercel.app/api/v1/Wishlist/${id}`, {
+      .delete(`https://ecommerce.routemisr.com/api/v1/Wishlist/${id}`, {
         headers: {
           token: localStorage.getItem("userToken"),
         },

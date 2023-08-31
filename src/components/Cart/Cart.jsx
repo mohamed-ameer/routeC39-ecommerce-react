@@ -25,7 +25,7 @@ export default function Cart() {
   const handleShow = () => setShow(true);
 
   let { data, isLoading, setData, error, setError } = useAxios(
-    `https://route-ecommerce-app.vercel.app/api/v1/cart`,
+    `https://ecommerce.routemisr.com/api/v1/cart`,
     localStorage.getItem("userToken")
   );
 
@@ -38,7 +38,7 @@ export default function Cart() {
     setBtnislaoding(true);
     axios
       .put(
-        `https://route-ecommerce-app.vercel.app/api/v1/cart/${productId}`,
+        `https://ecommerce.routemisr.com/api/v1/cart/${productId}`,
         {
           count: `${(productCount += 1)}`,
         },
@@ -59,7 +59,7 @@ export default function Cart() {
       setBtnislaoding(true);
       axios
         .put(
-          `https://route-ecommerce-app.vercel.app/api/v1/cart/${productId}`,
+          `https://ecommerce.routemisr.com/api/v1/cart/${productId}`,
           {
             count: `${
               productCount > 1
@@ -91,7 +91,7 @@ export default function Cart() {
           setBtnislaoding(true);
           axios
             .delete(
-              `https://route-ecommerce-app.vercel.app/api/v1/cart/${productId}`,
+              `https://ecommerce.routemisr.com/api/v1/cart/${productId}`,
               {
                 headers: {
                   token: localStorage.getItem("userToken"),
@@ -119,7 +119,7 @@ export default function Cart() {
 
   function clearCart(){
     axios
-    .delete(`https://route-ecommerce-app.vercel.app/api/v1/cart`, {
+    .delete(`https://ecommerce.routemisr.com/api/v1/cart`, {
       headers: {
         token: localStorage.getItem("userToken"),
       },
@@ -165,7 +165,7 @@ export default function Cart() {
         setdelislaoding(true);
         axios
           .delete(
-            `https://route-ecommerce-app.vercel.app/api/v1/cart/${productId}`,
+            `https://ecommerce.routemisr.com/api/v1/cart/${productId}`,
             {
               headers: {
                 token: localStorage.getItem("userToken"),
@@ -221,7 +221,7 @@ export default function Cart() {
       setIslaoding(true);
       axios
         .post(
-          `https://route-ecommerce-app.vercel.app/api/v1/orders/${userId}`,
+          `https://ecommerce.routemisr.com/api/v1/orders/${userId}`,
           { shippingAddress: datax },
           {
             headers: {

@@ -37,7 +37,7 @@ export default function EditProfileDataPassword() {
     setError(null);
     axios
       .put(
-        `https://route-ecommerce-app.vercel.app/api/v1/users/changeMyPassword`,
+        `https://ecommerce.routemisr.com/api/v1/users/changeMyPassword`,
         data,
         {
           headers: {

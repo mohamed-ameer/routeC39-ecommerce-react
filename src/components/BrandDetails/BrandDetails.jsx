@@ -8,7 +8,7 @@ import style from "./BrandDetails.module.css";
 export default function BrandDetails() {
   let prams = useParams();
   let { data, isLoading } = useAxios(
-    `https://route-ecommerce-app.vercel.app/api/v1/brands/${prams.id}`
+    `https://ecommerce.routemisr.com/api/v1/brands/${prams.id}`
   );
 
   return (

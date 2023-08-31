@@ -25,7 +25,7 @@ export default function Login({ setUseVerify }) {
     setIslaoding(true);
     axios
       .post(
-        `https://route-ecommerce-app.vercel.app/api/v1/auth/verifyResetCode`,
+        `https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode`,
         data
       )
       .then((res) => {

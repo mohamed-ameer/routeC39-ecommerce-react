@@ -14,7 +14,7 @@ export default function ProductDetails({ userData }) {
   let [btnIsLoading, setBtnislaoding] = useState(false);
   let [isError, setIsError] = useState(null);
   let { data, isLoading } = useAxios(
-    `https://route-ecommerce-app.vercel.app/api/v1/products/${prams.id}`
+    `https://ecommerce.routemisr.com/api/v1/products/${prams.id}`
   );
   let navigate = useNavigate();
   function addToCart() {
@@ -29,7 +29,7 @@ export default function ProductDetails({ userData }) {
     setBtnislaoding(true);
     axios
       .post(
-        "https://route-ecommerce-app.vercel.app/api/v1/cart",
+        "https://ecommerce.routemisr.com/api/v1/cart",
         { productId: prams.id },
         {
           headers: {

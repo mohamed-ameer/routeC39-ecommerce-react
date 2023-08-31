@@ -15,7 +15,7 @@ export default function Rrgister() {
     setIslaoding(true);
     setError(null);
     axios
-      .post(`https://route-ecommerce-app.vercel.app/api/v1/auth/signup`, data)
+      .post(`https://ecommerce.routemisr.com/api/v1/auth/signup`, data)
       .then((res) => {
         console.log(res.data);
         if (res.data.message === "success") {

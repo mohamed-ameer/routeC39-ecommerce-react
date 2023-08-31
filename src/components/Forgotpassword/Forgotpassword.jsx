@@ -19,7 +19,7 @@ export default function Login({ saveUserData }) {
     setIslaoding(true);
     axios
       .post(
-        `https://route-ecommerce-app.vercel.app/api/v1/auth/forgotPasswords`,
+        `https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords`,
         data
       )
       .then((res) => {
